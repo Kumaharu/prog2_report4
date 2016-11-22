@@ -3,9 +3,9 @@ package jp.ac.uryukyu.ie.e165720;
 
 public class LivingThing {
     String name;
-    int hitPoint;
-    int attack;
-    boolean dead;
+    private int hitPoint;
+    private int attack;
+    private boolean dead;
     public LivingThing(String name, int hitPoint, int attack){
         this.name = name;
         this.hitPoint = hitPoint;
@@ -14,6 +14,19 @@ public class LivingThing {
         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, hitPoint, attack);
 
     }
+
+    public int gethitPoint(){
+        return hitPoint;
+    }
+
+    public int getattack(){
+        return attack;
+    }
+
+    public void setDead(boolean dead){
+        this.dead = dead;
+    }
+
 
     public boolean isDead() {
         return dead;
